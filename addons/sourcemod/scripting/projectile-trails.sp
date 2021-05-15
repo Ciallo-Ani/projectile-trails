@@ -214,13 +214,13 @@ void InsertColor(int[] array, int[] color)
 
 public void OnEntityCreated(int entity, const char[] classname)
 {
-    if(IsValidEntity(entity))
-    {
+	if(IsValidEntity(entity))
+    	{
 		if(StrContains(classname, "_projectile", false) != -1)
-        {
+		{
 			SDKHook(entity, SDKHook_SpawnPost, ProjectileSpawned);
 		}
-    }
+	}
 }
 
 public void ProjectileSpawned(int entity)
